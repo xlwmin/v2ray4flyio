@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: superfly/flyctl-actions@1.1
+      - uses: superfly/flyctl-actions@master
         with:
           args: "secrets set UUID=${{ secrets.UUID }}"
         continue-on-error: true
-      - uses: superfly/flyctl-actions@1.1
+      - uses: superfly/flyctl-actions@master
         with:
           args: "regions set hkg"
-      - uses: superfly/flyctl-actions@1.1
+      - uses: superfly/flyctl-actions@master
         with:
           args: "deploy"
